@@ -1,0 +1,65 @@
+# .gitignore — Landing Gob Perú
+# Generado por new-software-project el 2026-09-20.
+# Los bloques de abajo son agnosticos de stack. Los del stack concreto se agregan
+# cuando F1 (arquitectura) decida el stack — ver el bloque "Stack" al final.
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Secretos (nunca commitear)
+# Solo se versiona .env.example, con nombres de variables y SIN valores.
+.env
+.env.*
+!.env.example
+
+# Credenciales y llaves sueltas
+*.pem
+*.key
+*.p12
+credentials.json
+service-account*.json
+
+# Artefactos de build y salidas generadas
+dist/
+build/
+out/
+target/
+bin/
+tmp/
+.cache/
+
+# Logs y volcados locales
+*.log
+logs/
+*.pid
+
+# Cobertura y reportes de test
+coverage/
+.coverage
+*.lcov
+
+# Herramientas de agente (config personal, no del equipo)
+# La config compartida SI se versiona (.claude/settings.json, commands/, skills/).
+.claude/settings.local.json
+
+# Marcadores de sesion que escriben los hooks. Son estado efimero de la maquina,
+# no del proyecto: versionarlos genera conflictos en cada sesion de cada persona.
+.claude/.session-marker*
+
+# Stack
+# VACIO A PROPOSITO. Cuando F1 fije el stack (lenguaje, runtime, gestor de
+# paquetes, contenedores, herramientas de build/render), agrega aqui sus
+# directorios de dependencias, caches y salidas binarias. Una linea por
+# herramienta, con un comentario que diga cual es.
+
+# Node / Vite
+node_modules/
+*.tsbuildinfo
+playwright-report/
+test-results/
+.pi/
