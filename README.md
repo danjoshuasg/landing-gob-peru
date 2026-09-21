@@ -62,7 +62,7 @@ npm run test:e2e
 
 La implementación actual incluye 16 pruebas de navegador, variantes locales AVIF/WebP/JPEG y auditoría Lighthouse. La última ejecución obtuvo 100 en accesibilidad, SEO y buenas prácticas; la evidencia vive en `artifacts/`.
 
-Este repositorio no contiene backend, CMS, analítica ni despliegue. Los textos son una propuesta editorial y la franja superior declara que no es un canal oficial de atención. Los CTA permanecen como navegación interna hasta recibir destinos institucionales confirmados.
+Este repositorio no contiene backend, CMS ni analítica. El frontend se despliega automáticamente en GitHub Pages. Los textos son una propuesta editorial y la franja superior declara que no es un canal oficial de atención. Los CTA permanecen como navegación interna hasta recibir destinos institucionales confirmados.
 
 Las credenciales de cualquier servicio van en `.env`, que está gitignored. **Nunca** commitees claves.
 
