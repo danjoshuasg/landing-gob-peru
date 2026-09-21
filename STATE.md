@@ -1,6 +1,6 @@
 <!-- generado por agent-harness. no editar a mano. regenera con `harness state`.
      escribi eventos, no este archivo: `harness log add ...`
-     sello: 07020d3c391d7b68 -->
+     sello: c02af45b09884eb9 -->
 
 # STATE
 
@@ -19,8 +19,8 @@ siguiente_paso: null   # nunca se escribio
 
 ## Ultimos gates
 
+- `2026-09-21T04:06:18Z` **?** ? — 0B/0M/0m en ? iter
 - `2026-09-21T03:59:41Z` **?** ? — 0B/0M/0m en ? iter
-- `2026-09-21T03:53:40Z` **?** ? — 0B/0M/0m en ? iter
 - `2026-09-21T03:53:40Z` **?** ? — 0B/0M/0m en ? iter
 
 ---

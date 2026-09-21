@@ -1,6 +1,6 @@
 <!-- generado por agent-harness. no editar a mano. regenera con `harness runlog`.
      escribi eventos, no este archivo: `harness log add ...`
-     sello: e2c1986398f861d2 -->
+     sello: 587d7d62db25bbb4 -->
 
 # runlog
 
@@ -12,6 +12,7 @@ Proyeccion cronologica del registro, mas reciente arriba.
 
 ## 2026-09-21
 
+- **gate** `T3` — None **None** 0B/0M/0m (? iter)
 - **gate** `T1` — None **None** 0B/0M/0m (? iter)
 - **gate** `T4` — None **None** 0B/0M/0m (? iter)
 - **gate** `T4` — None **None** 0B/0M/0m (? iter)
