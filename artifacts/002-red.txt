@@ -1,0 +1,634 @@
+
+> gob-peru-landing@0.1.0 test:e2e
+> playwright test
+
+
+Running 32 tests using 5 workers
+
+  ✓   2 [local-chrome] › tests/landing.spec.ts:31:1 › images expose local modern variants, alt, dimensions and loading policy (1.5s)
+  ✓   1 [local-chrome] › tests/landing.spec.ts:58:1 › fonts are local and loaded (1.4s)
+  ✓   3 [local-chrome] › tests/landing.spec.ts:8:1 › all internal anchors resolve and no fictional contact exists (1.5s)
+  ✓   5 [local-chrome] › tests/landing.spec.ts:52:1 › hero and territorial section use different illustrations (1.6s)
+  ✓   6 [local-chrome] › tests/landing.spec.ts:74:1 › cards and diagrams remain semantic HTML or SVG (636ms)
+  ✓   9 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 768px (649ms)
+  ✓   8 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 390px (656ms)
+  ✓   7 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 360px (856ms)
+  ✓  12 [local-chrome] › tests/landing.spec.ts:100:3 › progressive enhancement › essential content remains visible without JavaScript (548ms)
+  ✓  10 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 1024px (659ms)
+  ✓  11 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 1440px (956ms)
+  ✓  13 [local-chrome] › tests/landing.spec.ts:111:1 › mobile menu declares its control relationship (820ms)
+  ✓  14 [local-chrome] › tests/landing.spec.ts:120:1 › Escape closes mobile menu and returns focus (782ms)
+  ✓  15 [local-chrome] › tests/landing.spec.ts:132:1 › mobile menu traps focus while open and closed links are not tabbable (805ms)
+  ✓  16 [local-chrome] › tests/landing.spec.ts:145:1 › 200 percent text scale keeps controls available without horizontal overflow (428ms)
+  ✓  17 [local-chrome] › tests/landing.spec.ts:157:1 › reduced motion disables meaningful transitions and smooth scroll (730ms)
+  ✘   4 [local-chrome] › tests/landing.spec.ts:22:1 › all required editorial sections exist (6.2s)
+  ✘  18 [local-chrome] › tests/platform.spec.ts:16:1 › US1: five ordered proposals have diagram, title, promise and description in DOM order (5.5s)
+  ✘  19 [local-chrome] › tests/platform.spec.ts:44:1 › US1: platform sits between roles and territory in main (5.5s)
+  ✘  20 [local-chrome] › tests/platform.spec.ts:49:1 › US1: desktop navigation targets the unique platform section and focuses its heading (5.7s)
+  ✘  21 [local-chrome] › tests/platform.spec.ts:68:1 › US1: mobile platform link opens, activates by keyboard and closes the menu (5.5s)
+  ✘  22 [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 360px (5.4s)
+  ✘  23 [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 390px (5.6s)
+  ✘  24 [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 768px (5.7s)
+  ✘  25 [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 1024px (5.9s)
+  ✘  26 [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 1440px (5.9s)
+  ✘  27 [local-chrome] › tests/platform.spec.ts:110:1 › US1: cards remain readable without clipping or overlap at 200% text scale (5.5s)
+  ✘  28 [local-chrome] › tests/platform.spec.ts:139:1 › US2: five decorative inline SVGs use fixed viewBox and no image or external resources (5.5s)
+  ✘  29 [local-chrome] › tests/platform.spec.ts:156:1 › US2: reduced motion prevents animation of every diagram and its descendants (5.5s)
+  ✘  30 [local-chrome] › tests/platform.spec.ts:172:3 › US2: static fallback › five cards and diagrams remain visible without JavaScript (5.5s)
+  ✘  31 [local-chrome] › tests/platform.spec.ts:195:1 › US3: no cross-origin requests and no external links (5.4s)
+  ✘  32 [local-chrome] › tests/platform.spec.ts:208:1 › US3: future scope and weekly human validation without prohibited content (5.6s)
+
+
+  1) [local-chrome] › tests/landing.spec.ts:22:1 › all required editorial sections exist ───────────
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section')
+    Expected: 9
+    Received: 8
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section') with timeout 5000ms
+      - waiting for locator('main > section')
+        14 × locator resolved to 8 elements
+           - unexpected value "8"
+
+
+      26 |   }
+      27 |   await expect(page.locator('main h1')).toHaveCount(1)
+    > 28 |   await expect(page.locator('main > section')).toHaveCount(9)
+         |                                                ^
+      29 | })
+      30 |
+      31 | test('images expose local modern variants, alt, dimensions and loading policy', async ({ page }) => {
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/landing.spec.ts:28:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/landing-all-required-editorial-sections-exist-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/landing-all-required-editorial-sections-exist-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/landing-all-required-editorial-sections-exist-local-chrome/error-context.md
+
+  2) [local-chrome] › tests/platform.spec.ts:16:1 › US1: five ordered proposals have diagram, title, promise and description in DOM order 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:17:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US1-five-ordered--6467a-nd-description-in-DOM-order-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US1-five-ordered--6467a-nd-description-in-DOM-order-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US1-five-ordered--6467a-nd-description-in-DOM-order-local-chrome/error-context.md
+
+  3) [local-chrome] › tests/platform.spec.ts:44:1 › US1: platform sits between roles and territory in main 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:45:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-sits-3b6dd-roles-and-territory-in-main-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-sits-3b6dd-roles-and-territory-in-main-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US1-platform-sits-3b6dd-roles-and-territory-in-main-local-chrome/error-context.md
+
+  4) [local-chrome] › tests/platform.spec.ts:49:1 › US1: desktop navigation targets the unique platform section and focuses its heading 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:51:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US1-desktop-navig-c8ec8-ion-and-focuses-its-heading-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US1-desktop-navig-c8ec8-ion-and-focuses-its-heading-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US1-desktop-navig-c8ec8-ion-and-focuses-its-heading-local-chrome/error-context.md
+
+  5) [local-chrome] › tests/platform.spec.ts:68:1 › US1: mobile platform link opens, activates by keyboard and closes the menu 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:70:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US1-mobile-platfo-12e3d-eyboard-and-closes-the-menu-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US1-mobile-platfo-12e3d-eyboard-and-closes-the-menu-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US1-mobile-platfo-12e3d-eyboard-and-closes-the-menu-local-chrome/error-context.md
+
+  6) [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 360px 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:95:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-and-document-do-not-overflow-at-360px-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-and-document-do-not-overflow-at-360px-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US1-platform-and-document-do-not-overflow-at-360px-local-chrome/error-context.md
+
+  7) [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 390px 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:95:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-and-document-do-not-overflow-at-390px-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-and-document-do-not-overflow-at-390px-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US1-platform-and-document-do-not-overflow-at-390px-local-chrome/error-context.md
+
+  8) [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 768px 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:95:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-and-document-do-not-overflow-at-768px-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-and-document-do-not-overflow-at-768px-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US1-platform-and-document-do-not-overflow-at-768px-local-chrome/error-context.md
+
+  9) [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 1024px 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:95:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-and-document-do-not-overflow-at-1024px-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-and-document-do-not-overflow-at-1024px-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US1-platform-and-document-do-not-overflow-at-1024px-local-chrome/error-context.md
+
+  10) [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 1440px 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:95:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-and-document-do-not-overflow-at-1440px-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US1-platform-and-document-do-not-overflow-at-1440px-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US1-platform-and-document-do-not-overflow-at-1440px-local-chrome/error-context.md
+
+  11) [local-chrome] › tests/platform.spec.ts:110:1 › US1: cards remain readable without clipping or overlap at 200% text scale 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:112:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US1-cards-remain--32780-r-overlap-at-200-text-scale-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US1-cards-remain--32780-r-overlap-at-200-text-scale-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US1-cards-remain--32780-r-overlap-at-200-text-scale-local-chrome/error-context.md
+
+  12) [local-chrome] › tests/platform.spec.ts:139:1 › US2: five decorative inline SVGs use fixed viewBox and no image or external resources 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:140:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US2-five-decorati-48ab9-image-or-external-resources-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US2-five-decorati-48ab9-image-or-external-resources-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US2-five-decorati-48ab9-image-or-external-resources-local-chrome/error-context.md
+
+  13) [local-chrome] › tests/platform.spec.ts:156:1 › US2: reduced motion prevents animation of every diagram and its descendants 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:158:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US2-reduced-motio-81f60-diagram-and-its-descendants-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US2-reduced-motio-81f60-diagram-and-its-descendants-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US2-reduced-motio-81f60-diagram-and-its-descendants-local-chrome/error-context.md
+
+  14) [local-chrome] › tests/platform.spec.ts:172:3 › US2: static fallback › five cards and diagrams remain visible without JavaScript 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:173:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US2-static-fallba-4a859--visible-without-JavaScript-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US2-static-fallba-4a859--visible-without-JavaScript-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US2-static-fallba-4a859--visible-without-JavaScript-local-chrome/error-context.md
+
+  15) [local-chrome] › tests/platform.spec.ts:195:1 › US3: no cross-origin requests and no external links 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:201:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US3-no-cross-origin-requests-and-no-external-links-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US3-no-cross-origin-requests-and-no-external-links-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US3-no-cross-origin-requests-and-no-external-links-local-chrome/error-context.md
+
+  16) [local-chrome] › tests/platform.spec.ts:208:1 › US3: future scope and weekly human validation without prohibited content 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('main > section#plataforma')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('main > section#plataforma') with timeout 5000ms
+      - waiting for locator('main > section#plataforma')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      11 | const openPlatform = async (page: Page) => {
+      12 |   await page.goto('/')
+    > 13 |   await expect(page.locator('main > section#plataforma')).toHaveCount(1)
+         |                                                           ^
+      14 | }
+      15 |
+      16 | test('US1: five ordered proposals have diagram, title, promise and description in DOM order', async ({ page }) => {
+        at openPlatform (/Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:13:59)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/platform.spec.ts:209:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/platform-US3-future-scope--0021a--without-prohibited-content-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/platform-US3-future-scope--0021a--without-prohibited-content-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/platform-US3-future-scope--0021a--without-prohibited-content-local-chrome/error-context.md
+
+  16 failed
+    [local-chrome] › tests/landing.spec.ts:22:1 › all required editorial sections exist ────────────
+    [local-chrome] › tests/platform.spec.ts:16:1 › US1: five ordered proposals have diagram, title, promise and description in DOM order 
+    [local-chrome] › tests/platform.spec.ts:44:1 › US1: platform sits between roles and territory in main 
+    [local-chrome] › tests/platform.spec.ts:49:1 › US1: desktop navigation targets the unique platform section and focuses its heading 
+    [local-chrome] › tests/platform.spec.ts:68:1 › US1: mobile platform link opens, activates by keyboard and closes the menu 
+    [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 360px 
+    [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 390px 
+    [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 768px 
+    [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 1024px 
+    [local-chrome] › tests/platform.spec.ts:93:3 › US1: platform and document do not overflow at 1440px 
+    [local-chrome] › tests/platform.spec.ts:110:1 › US1: cards remain readable without clipping or overlap at 200% text scale 
+    [local-chrome] › tests/platform.spec.ts:139:1 › US2: five decorative inline SVGs use fixed viewBox and no image or external resources 
+    [local-chrome] › tests/platform.spec.ts:156:1 › US2: reduced motion prevents animation of every diagram and its descendants 
+    [local-chrome] › tests/platform.spec.ts:172:3 › US2: static fallback › five cards and diagrams remain visible without JavaScript 
+    [local-chrome] › tests/platform.spec.ts:195:1 › US3: no cross-origin requests and no external links 
+    [local-chrome] › tests/platform.spec.ts:208:1 › US3: future scope and weekly human validation without prohibited content 
+  16 passed (24.8s)

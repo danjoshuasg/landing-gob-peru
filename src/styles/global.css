@@ -320,6 +320,54 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
 .role-grid article > p:not(.role-eyebrow) { margin-top: 13px; max-width: 300px; color: var(--muted); font-size: 14px; line-height: 1.6; }
 .role-line { position: absolute; right: 30px; bottom: 28px; left: 30px; height: 4px; background: linear-gradient(90deg, var(--wine) 0 33%, var(--wine-soft) 33%); }
 
+/* Plataforma — propuesta de valor con diagramas de grabado. */
+.platform { border-top: 1px solid var(--rule); }
+.platform-grid { margin-top: 72px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border: 1px solid var(--rule); }
+.platform-grid article { grid-column: span 2; position: relative; min-width: 0; min-height: 430px; padding: 30px; background: rgba(255,255,255,.26); border-left: 1px solid var(--rule); }
+.platform-grid article:nth-child(1), .platform-grid article:nth-child(4) { border-left: 0; }
+.platform-grid article.is-wide { grid-column: span 3; border-top: 1px solid var(--rule); }
+.platform-grid article::before { content: attr(data-order); color: var(--wine); font-size: 10px; font-weight: 650; }
+/* Bloque de alto fijo: con grid, el 100 % de alto del SVG no se resuelve y el dibujo desborda sobre el título. */
+.platform-art { height: 185px; margin-top: 8px; }
+.platform-art .diagram { display: block; }
+.platform-grid h3 { margin-top: 24px; font-size: 27px; }
+.platform-promise { margin-top: 9px; color: var(--ink); font-size: 15px; line-height: 1.45; }
+.platform-grid p:not(.platform-promise) { margin-top: 8px; max-width: 320px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.diagram { width: 100%; height: 100%; overflow: visible; }
+.diagram * { vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+.diagram .dg-hatch-line { stroke: var(--wine); stroke-width: .5; fill: none; }
+.diagram .dg-plaque { stroke: var(--wine); stroke-width: 1.1; }
+.diagram .dg-plaque:not([fill]) { fill: var(--paper); }
+.diagram .dg-hatch { stroke: var(--wine); stroke-width: .7; }
+.diagram .dg-text { stroke: var(--wine); stroke-width: .7; fill: none; opacity: .55; }
+.diagram .dg-text--strong { opacity: 1; stroke-width: 1.1; }
+.diagram .dg-wire { stroke: var(--wine); stroke-width: .9; fill: none; }
+.diagram .dg-wire--dash { stroke-dasharray: 2 3; }
+.diagram .dg-accent { fill: var(--wine); }
+.diagram .dg-cell { stroke: none; }
+.diagram .dg-grid { stroke: var(--wine); stroke-width: .7; fill: none; }
+.diagram .dg-mark { stroke: var(--wine); stroke-width: 1.1; fill: none; }
+.diagram .dg-ring { fill: var(--paper); stroke: var(--wine); stroke-width: 1.1; }
+.diagram .dg-perforation { stroke: var(--wine); stroke-width: .8; stroke-dasharray: 1 2.5; fill: none; }
+.diagram .dg-ribbon { stroke: var(--wine); stroke-width: 1.1; }
+.diagram .dg-rule { stroke: var(--wine); stroke-width: 1.1; fill: none; }
+.diagram .dg-fold { stroke: var(--wine); stroke-width: .8; stroke-dasharray: 3 2.5; fill: none; }
+.diagram .dg-signature { stroke: var(--wine); stroke-width: 1.1; fill: none; }
+.diagram .dg-tick { stroke: var(--wine); stroke-width: .7; fill: none; }
+.diagram .dg-arrow { stroke: var(--wine); stroke-width: 1.1; fill: none; }
+.diagram .dg-pin { fill: var(--paper); stroke: var(--wine); stroke-width: 1; }
+.diagram .dg-outline { stroke: var(--wine); stroke-width: 1.1; fill: none; }
+.diagram .dg-link { stroke: var(--wine); stroke-width: 1.3; fill: none; }
+.diagram .dg-link--inner { stroke-width: .7; }
+.diagram .dg-link-gap { stroke: var(--paper); stroke-width: 4; fill: none; }
+.diagram .dg-seal-ring { stroke: var(--wine); stroke-width: .9; stroke-dasharray: 1.5 2; fill: none; }
+.diagram .dg-seal-mark { stroke: var(--paper); stroke-width: 1.8; fill: none; }
+@media (max-width: 900px) {
+  .platform-grid { grid-template-columns: 1fr; margin-top: 48px; }
+  .platform-grid article, .platform-grid article.is-wide { grid-column: auto; border-left: 0; border-top: 1px solid var(--rule); min-height: 380px; }
+  .platform-grid article:first-child { border-top: 0; }
+}
+
 .territory { width: min(1380px, calc(100vw - 40px)); padding-top: 20px; }
 .territory-stage { position: relative; min-height: 760px; overflow: hidden; border: 1px solid rgba(85,16,39,.18); }
 .territory-stage > picture, .territory-stage img { width: 100%; height: 100%; position: absolute; inset: 0; }
@@ -387,6 +435,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
   .mobile-nav { position: fixed; z-index: 40; inset: 101px 0 0; padding: 25px 20px 40px; display: block; background: var(--paper); transform: translateX(100%); transition: transform .3s ease; }
   .mobile-nav.is-open { transform: none; }
   .mobile-nav a { min-height: 70px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--rule); font-family: var(--display); font-size: 28px; }
+  .mobile-nav a:focus { outline: 2px solid var(--wine); outline-offset: -2px; }
   .split-heading, .section-intro { gap: 45px; }
   .capability-card { width: 76%; }
   .field { grid-template-columns: 1fr; }
@@ -447,6 +496,6 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
   [data-reveal] { opacity: 1; transform: none; }
 }

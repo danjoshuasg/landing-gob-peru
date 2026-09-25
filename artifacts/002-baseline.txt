@@ -1,0 +1,26 @@
+
+> gob-peru-landing@0.1.0 test:e2e
+> playwright test
+
+
+Running 17 tests using 5 workers
+
+  ✓   5 [local-chrome] › tests/landing.spec.ts:52:1 › hero and territorial section use different illustrations (2.6s)
+  ✓   2 [local-chrome] › tests/landing.spec.ts:22:1 › all required editorial sections exist (3.7s)
+  ✓   4 [local-chrome] › tests/landing.spec.ts:31:1 › images expose local modern variants, alt, dimensions and loading policy (3.7s)
+  ✓   1 [local-chrome] › tests/landing.spec.ts:58:1 › fonts are local and loaded (3.8s)
+  ✓   3 [local-chrome] › tests/landing.spec.ts:8:1 › all internal anchors resolve and no fictional contact exists (3.9s)
+  ✓   6 [local-chrome] › tests/landing.spec.ts:74:1 › cards and diagrams remain semantic HTML or SVG (1.4s)
+  ✓   8 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 390px (1.6s)
+  ✓   7 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 360px (1.7s)
+  ✓  11 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 1440px (1.6s)
+  ✓  12 [local-chrome] › tests/landing.spec.ts:100:3 › progressive enhancement › essential content remains visible without JavaScript (474ms)
+  ✓  10 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 1024px (2.1s)
+  ✓  13 [local-chrome] › tests/landing.spec.ts:111:1 › mobile menu declares its control relationship (667ms)
+  ✓   9 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 768px (2.3s)
+  ✓  14 [local-chrome] › tests/landing.spec.ts:120:1 › Escape closes mobile menu and returns focus (781ms)
+  ✓  15 [local-chrome] › tests/landing.spec.ts:132:1 › mobile menu traps focus while open and closed links are not tabbable (752ms)
+  ✓  16 [local-chrome] › tests/landing.spec.ts:145:1 › 200 percent text scale keeps controls available without horizontal overflow (776ms)
+  ✓  17 [local-chrome] › tests/landing.spec.ts:157:1 › reduced motion disables meaningful transitions and smooth scroll (672ms)
+
+  17 passed (8.5s)

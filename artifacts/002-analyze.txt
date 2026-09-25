@@ -1,0 +1,41 @@
+Warning: No models match pattern "commandcode/Qwen/Qwen*-Flash"
+Warning: No models match pattern "commandcode/zai-org/GLM-*"
+## Specification Analysis Report
+
+**Alcance:** análisis de `spec.md`, `plan.md` y `tasks.md`, contrastados con la constitución. No se editó ningún archivo.
+
+| ID | Categoría | Severidad | Ubicación | Hallazgo y recomendación |
+|---|---|---|---|---|
+| A1 | Ambigüedad | **HIGH** | `specs/002-citizen-platform-proposal/spec.md:17,68,86`; `specs/002-citizen-platform-proposal/plan.md:72`; `specs/002-citizen-platform-proposal/tasks.md:68` | La aceptación pide indicar la **profundidad cubierta** por poder, pero el plan prohíbe concretarla sin confirmación. Obtener esa definición editorial antes de dar por cumplido FR-005; no inventar un límite. |
+| A2 | Cobertura de caso límite | **HIGH** | `specs/002-citizen-platform-proposal/spec.md:72`; `specs/002-citizen-platform-proposal/plan.md:36`; `specs/002-citizen-platform-proposal/tasks.md:21,76` | La spec dice «si JavaScript tarda o falla»; el `<noscript>` previsto solo cubre JS deshabilitado, no un fallo con JS habilitado. Acordar la interpretación con el responsable humano antes de certificar ese caso. |
+| C1 | Cobertura de aceptación | **MEDIUM** | `specs/002-citizen-platform-proposal/spec.md:34`; `specs/002-citizen-platform-proposal/tasks.md:19,37` | La historia exige que, al activar el enlace, el foco visual quede **en el título**. Las tareas comprueban el enlace y su indicador de foco, pero no el foco en el título de destino. Añadir una comprobación explícita a T004. |
+| C2 | Cobertura de pruebas | **MEDIUM** | `specs/002-citizen-platform-proposal/spec.md:74`; `specs/002-citizen-platform-proposal/tasks.md:20`; `tests/landing.spec.ts:145-154` | Se pide ausencia de solapes y recortes con texto al 200 %. T005 lo menciona, pero la prueba previa solo mide desbordamiento y visibilidad del botón. Definir aserciones o una revisión visual reproducible para las tarjetas. |
+| I1 | Consistencia | **LOW** | `specs/002-citizen-platform-proposal/spec.md:89,116`; `specs/002-citizen-platform-proposal/tasks.md:38,69` | La spec excluye «cifras» de la sección; las tareas matizan «cifras institucionales no provistas». Unificar el criterio editorial sin ampliar lo permitido por la spec aprobada. |
+
+### Coverage Summary
+
+La cobertura indica **tarea asociada**, no cumplimiento verificado.
+
+| Requirement Key | Has Task? | Task IDs |
+|---|---|---|
+| FR-001–FR-003 | Sí | T003, T012–T013, T022 |
+| FR-004 | Sí | T004, T011 |
+| FR-005–FR-007 | Sí, con A1 | T007, T024–T026 |
+| FR-008 | Sí | T007, T012, T025 |
+| FR-009–FR-010 | Sí | T006, T016–T023 |
+| FR-011–FR-013 | Sí | T004–T006, T014, T023 |
+| FR-014 | Sí | T001, T008, T027 |
+| FR-015 | Sí; sin motion inicial | T006, T016–T020 |
+| SC-001–SC-004 | Sí | T003–T005, T008–T009, T027 |
+| SC-005 | Sí | T028 |
+| SC-006 | Sí | T007, T026 |
+| SC-007 | Sí | T023 |
+| SC-008 | Sí | T007, T025 |
+
+**Constitución:** no identifiqué un conflicto confirmado con sus principios MUST. La prohibición de inventar datos respalda detener la definición de profundidad hasta validarla (`.specify/memory/constitution.md:14-16`); los dos gates independientes están previstos en T029 (`.specify/memory/constitution.md:30-32`; `specs/002-citizen-platform-proposal/tasks.md:76`).
+
+**Tareas sin requisito o historia asociada:** ninguna; T001–T002 y T009–T010 son preparación y control del proceso (`specs/002-citizen-platform-proposal/tasks.md:7-25`).
+
+**Métricas:** 15 FR + 8 SC; 29 tareas; cobertura nominal **23/23 (100 %)**; 2 ambigüedades principales; 0 duplicaciones; 0 hallazgos críticos.
+
+**Decisión antes de implementar:** resolver A1 y A2 con el responsable humano. Después se pueden precisar las pruebas de C1 y C2 sin cambiar la spec aprobada. ¿Quieres que proponga cambios concretos para esos cuatro hallazgos, **sin aplicarlos**?

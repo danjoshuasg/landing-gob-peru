@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { Picture } from './components/Picture'
+import { PlatformSection } from './components/PlatformSection'
 
 const navItems = [
   { label: 'Visión', href: '#vision' },
   { label: 'Cómo funciona', href: '#metodo' },
   { label: 'Capacidades', href: '#capacidades' },
+  { label: 'Plataforma', href: '#plataforma' },
   { label: 'Principios', href: '#principios' },
 ]
 
@@ -57,6 +59,11 @@ function MarkIcon() {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuToggleRef = useRef<HTMLButtonElement>(null)
+
+  const focusPlatformHeading = () => {
+    // Keep native fragment navigation, then move keyboard focus to its heading.
+    window.setTimeout(() => document.querySelector<HTMLElement>('#plataforma h2')?.focus({ preventScroll: true }), 0)
+  }
 
   useEffect(() => {
     const nodes = document.querySelectorAll<HTMLElement>('[data-reveal]')
@@ -136,7 +143,7 @@ function App() {
             <span><strong>Gob</strong> Perú</span>
           </a>
           <nav className="desktop-nav" aria-label="Navegación principal">
-            {navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
+            {navItems.map((item) => <a key={item.href} href={item.href} onClick={item.href === '#plataforma' ? focusPlatformHeading : undefined}>{item.label}</a>)}
           </nav>
           <a className="button button-dark header-cta" href="#contacto">Conversemos</a>
           <button
@@ -154,7 +161,7 @@ function App() {
         </div>
         <nav id="mobile-navigation" className={`mobile-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Navegación móvil">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>{item.label}<ArrowIcon /></a>
+            <a key={item.href} href={item.href} tabIndex={menuOpen ? 0 : -1} onClick={() => { setMenuOpen(false); if (item.href === '#plataforma') focusPlatformHeading() }}>{item.label}<ArrowIcon /></a>
           ))}
           <a href="#contacto" tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>Conversemos<ArrowIcon /></a>
         </nav>
@@ -294,6 +301,8 @@ function App() {
             ))}
           </div>
         </section>
+
+        <PlatformSection />
 
         <section className="territory section">
           <div className="territory-stage" data-reveal>

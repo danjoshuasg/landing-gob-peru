@@ -25,7 +25,7 @@ test('all required editorial sections exist', async ({ page }) => {
     await expect(page.locator(selector)).toHaveCount(1)
   }
   await expect(page.locator('main h1')).toHaveCount(1)
-  await expect(page.locator('main > section')).toHaveCount(8)
+  await expect(page.locator('main > section')).toHaveCount(9)
 })
 
 test('images expose local modern variants, alt, dimensions and loading policy', async ({ page }) => {
