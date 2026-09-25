@@ -1,0 +1,169 @@
+===== npm run typecheck =====
+
+> gob-peru-landing@0.1.0 typecheck
+> tsc -b --pretty false
+
+EXIT typecheck=0
+
+===== npm run build =====
+
+> gob-peru-landing@0.1.0 build
+> tsc -b && vite build
+
+vite v8.3.0 building client environment for production...
+transforming...
+✓ 31 modules transformed.
+rendering chunks...
+8:52:44 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+computing gzip size...
+dist/index.html                  21.00 kB │ gzip:  5.18 kB
+dist/assets/index-I71AoLJF.css   31.55 kB │ gzip:  7.00 kB
+dist/assets/index-Dh0K3a_q.js   269.36 kB │ gzip: 82.80 kB
+
+✓ built in 241ms
+EXIT build=0
+
+===== npx playwright test --reporter=list (1) =====
+
+Running 44 tests using 5 workers
+
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓   4 [local-chrome] › tests/landing.spec.ts:8:1 › all internal anchors resolve and no fictional contact exists (3.0s)
+  ✓   1 [local-chrome] › tests/landing.spec.ts:52:1 › hero and audience illustrations use different sources (2.9s)
+  ✓   2 [local-chrome] › tests/landing.spec.ts:22:1 › all required editorial sections exist (3.0s)
+  ✓   3 [local-chrome] › tests/landing.spec.ts:31:1 › images expose local modern variants, alt, dimensions and loading policy (3.1s)
+  ✓   5 [local-chrome] › tests/landing.spec.ts:58:1 › fonts are local and loaded (3.0s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓   6 [local-chrome] › tests/landing.spec.ts:74:1 › cards and diagrams remain semantic HTML or SVG (1.0s)
+  ✓   9 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 768px (1.2s)
+  ✓   8 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 390px (1.3s)
+  ✓   7 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 360px (1.3s)
+  ✓  10 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 1024px (1.3s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  11 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 1440px (837ms)
+  ✓  12 [local-chrome] › tests/landing.spec.ts:100:3 › progressive enhancement › essential content remains visible without JavaScript (714ms)
+  ✓  13 [local-chrome] › tests/landing.spec.ts:111:1 › mobile menu declares its control relationship (973ms)
+  ✓  14 [local-chrome] › tests/landing.spec.ts:120:1 › Escape closes mobile menu and returns focus (1.0s)
+  ✓  15 [local-chrome] › tests/landing.spec.ts:132:1 › mobile menu traps focus while open and closed links are not tabbable (1.1s)
+  ✓  16 [local-chrome] › tests/landing.spec.ts:145:1 › 200 percent text scale keeps controls available without horizontal overflow (783ms)
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  17 [local-chrome] › tests/landing.spec.ts:157:1 › reduced motion disables meaningful transitions and smooth scroll (931ms)
+  ✓  19 [local-chrome] › tests/platform.spec.ts:44:1 › US1: platform follows the merged audience section in main (1.0s)
+  ✓  18 [local-chrome] › tests/platform.spec.ts:16:1 › US1: five ordered proposals have diagram, title, promise and description in DOM order (1.5s)
+  ✓  22 [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 360px (1.0s)
+  ✓  21 [local-chrome] › tests/platform.spec.ts:68:1 › US1: mobile platform link opens, activates by keyboard and closes the menu (1.4s)
+  ✓  23 [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 390px (997ms)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  20 [local-chrome] › tests/platform.spec.ts:49:1 › US1: desktop navigation targets the unique platform section and focuses its heading (2.9s)
+  ✓  24 [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 768px (1.5s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  25 [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 1024px (2.1s)
+  ✓  26 [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 1440px (2.0s)
+  ✓  27 [local-chrome] › tests/platform.spec.ts:111:1 › US1: cards remain readable without clipping or overlap at 200% text scale (1.9s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  29 [local-chrome] › tests/platform.spec.ts:157:1 › US2: reduced motion prevents animation of every diagram and its descendants (1.8s)
+  ✓  28 [local-chrome] › tests/platform.spec.ts:140:1 › US2: five decorative inline SVGs use fixed viewBox and no image or external resources (1.9s)
+  ✓  30 [local-chrome] › tests/platform.spec.ts:173:3 › US2: static fallback › five cards and diagrams remain visible without JavaScript (1.2s)
+  ✓  32 [local-chrome] › tests/platform.spec.ts:209:1 › FR-007/FR-008: future proposal without prohibited content or platform facts (1.0s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  31 [local-chrome] › tests/platform.spec.ts:196:1 › FR-007/FR-008: no cross-origin requests and no external links (2.0s)
+  ✓  33 [local-chrome] › tests/rewrite-landing.spec.ts:3:1 › brand and one primary hero action identify the platform (1.4s)
+  ✓  34 [local-chrome] › tests/rewrite-landing.spec.ts:17:1 › sections follow the agreed narrative and audiences inherit both images (1.8s)
+  ✓  35 [local-chrome] › tests/rewrite-landing.spec.ts:38:1 › method explains sources, all powers, weekly cut and human validation (1.8s)
+  ✓  36 [local-chrome] › tests/rewrite-landing.spec.ts:60:1 › mockup language is retired outside the frozen platform (1.7s)
+  ✓  37 [local-chrome] › tests/rewrite-landing.spec.ts:66:1 › principles, independence, construction and prohibited material (1.6s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  38 [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 360px (1.3s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  39 [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 390px (1.4s)
+  ✓  41 [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 1024px (1.4s)
+  ✓  40 [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 768px (1.8s)
+  ✓  43 [local-chrome] › tests/rewrite-landing.spec.ts:88:1 › new text fits 360px at 200 percent (1.4s)
+  ✓  42 [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 1440px (1.5s)
+  ✓  44 [local-chrome] › tests/rewrite-landing.spec.ts:97:3 › without JavaScript › fallback presents the same identity, narrative and action (900ms)
+
+  44 passed (16.2s)
+EXIT test:e2e(1)=0
+
+===== npx playwright test --reporter=list (2) =====
+
+Running 44 tests using 5 workers
+
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓   5 [local-chrome] › tests/landing.spec.ts:8:1 › all internal anchors resolve and no fictional contact exists (3.0s)
+  ✓   3 [local-chrome] › tests/landing.spec.ts:31:1 › images expose local modern variants, alt, dimensions and loading policy (3.0s)
+  ✓   1 [local-chrome] › tests/landing.spec.ts:58:1 › fonts are local and loaded (3.0s)
+  ✓   2 [local-chrome] › tests/landing.spec.ts:52:1 › hero and audience illustrations use different sources (3.0s)
+  ✓   4 [local-chrome] › tests/landing.spec.ts:22:1 › all required editorial sections exist (3.2s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓   7 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 360px (1.5s)
+  ✓  10 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 1024px (1.6s)
+  ✓   8 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 390px (1.9s)
+  ✓   6 [local-chrome] › tests/landing.spec.ts:74:1 › cards and diagrams remain semantic HTML or SVG (2.2s)
+  ✓   9 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 768px (2.4s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  11 [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 1440px (1.8s)
+  ✓  13 [local-chrome] › tests/landing.spec.ts:111:1 › mobile menu declares its control relationship (1.9s)
+  ✓  12 [local-chrome] › tests/landing.spec.ts:100:3 › progressive enhancement › essential content remains visible without JavaScript (2.1s)
+  ✓  14 [local-chrome] › tests/landing.spec.ts:120:1 › Escape closes mobile menu and returns focus (2.2s)
+  ✓  15 [local-chrome] › tests/landing.spec.ts:132:1 › mobile menu traps focus while open and closed links are not tabbable (1.9s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  16 [local-chrome] › tests/landing.spec.ts:145:1 › 200 percent text scale keeps controls available without horizontal overflow (1.3s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  18 [local-chrome] › tests/platform.spec.ts:16:1 › US1: five ordered proposals have diagram, title, promise and description in DOM order (1.5s)
+  ✓  17 [local-chrome] › tests/landing.spec.ts:157:1 › reduced motion disables meaningful transitions and smooth scroll (1.6s)
+  ✓  19 [local-chrome] › tests/platform.spec.ts:44:1 › US1: platform follows the merged audience section in main (1.9s)
+  ✓  21 [local-chrome] › tests/platform.spec.ts:68:1 › US1: mobile platform link opens, activates by keyboard and closes the menu (1.8s)
+  ✓  22 [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 360px (1.3s)
+  ✓  23 [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 390px (1.3s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  20 [local-chrome] › tests/platform.spec.ts:49:1 › US1: desktop navigation targets the unique platform section and focuses its heading (2.9s)
+  ✓  24 [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 768px (1.0s)
+  ✓  25 [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 1024px (1.2s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  26 [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 1440px (1.2s)
+  ✓  27 [local-chrome] › tests/platform.spec.ts:111:1 › US1: cards remain readable without clipping or overlap at 200% text scale (1.1s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  29 [local-chrome] › tests/platform.spec.ts:157:1 › US2: reduced motion prevents animation of every diagram and its descendants (1.1s)
+  ✓  28 [local-chrome] › tests/platform.spec.ts:140:1 › US2: five decorative inline SVGs use fixed viewBox and no image or external resources (1.2s)
+  ✓  30 [local-chrome] › tests/platform.spec.ts:173:3 › US2: static fallback › five cards and diagrams remain visible without JavaScript (743ms)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  32 [local-chrome] › tests/platform.spec.ts:209:1 › FR-007/FR-008: future proposal without prohibited content or platform facts (903ms)
+  ✓  31 [local-chrome] › tests/platform.spec.ts:196:1 › FR-007/FR-008: no cross-origin requests and no external links (1.4s)
+  ✓  33 [local-chrome] › tests/rewrite-landing.spec.ts:3:1 › brand and one primary hero action identify the platform (930ms)
+  ✓  34 [local-chrome] › tests/rewrite-landing.spec.ts:17:1 › sections follow the agreed narrative and audiences inherit both images (1.1s)
+  ✓  35 [local-chrome] › tests/rewrite-landing.spec.ts:38:1 › method explains sources, all powers, weekly cut and human validation (1.2s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  36 [local-chrome] › tests/rewrite-landing.spec.ts:60:1 › mockup language is retired outside the frozen platform (905ms)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  37 [local-chrome] › tests/rewrite-landing.spec.ts:66:1 › principles, independence, construction and prohibited material (906ms)
+  ✓  38 [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 360px (900ms)
+  ✓  39 [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 390px (1.0s)
+[WebServer] WebSocket server error: Port 24678 is already in use
+  ✓  40 [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 768px (959ms)
+  ✓  41 [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 1024px (923ms)
+  ✓  42 [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 1440px (867ms)
+  ✓  43 [local-chrome] › tests/rewrite-landing.spec.ts:88:1 › new text fits 360px at 200 percent (797ms)
+  ✓  44 [local-chrome] › tests/rewrite-landing.spec.ts:97:3 › without JavaScript › fallback presents the same identity, narrative and action (576ms)
+
+  44 passed (16.3s)
+EXIT test:e2e(2)=0
+

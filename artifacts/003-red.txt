@@ -1,0 +1,592 @@
+
+> gob-peru-landing@0.1.0 test:e2e
+> playwright test --reporter=line
+
+
+Running 44 tests using 5 workers
+
+[1/44] [local-chrome] › tests/landing.spec.ts:31:1 › images expose local modern variants, alt, dimensions and loading policy
+[2/44] [local-chrome] › tests/landing.spec.ts:52:1 › hero and audience illustrations use different sources
+[3/44] [local-chrome] › tests/landing.spec.ts:22:1 › all required editorial sections exist
+[4/44] [local-chrome] › tests/landing.spec.ts:8:1 › all internal anchors resolve and no fictional contact exists
+[5/44] [local-chrome] › tests/landing.spec.ts:58:1 › fonts are local and loaded
+[WebServer] WebSocket server error: Port 24678 is already in use
+
+[WebServer] WebSocket server error: Port 24678 is already in use
+
+[WebServer] WebSocket server error: Port 24678 is already in use
+
+[WebServer] WebSocket server error: Port 24678 is already in use
+
+[6/44] [local-chrome] › tests/landing.spec.ts:74:1 › cards and diagrams remain semantic HTML or SVG
+[7/44] [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 360px
+[8/44] [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 390px
+[9/44] [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 768px
+[WebServer] WebSocket server error: Port 24678 is already in use
+
+[WebServer] WebSocket server error: Port 24678 is already in use
+
+[WebServer] WebSocket server error: Port 24678 is already in use
+
+[10/44] [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 1024px
+[11/44] [local-chrome] › tests/landing.spec.ts:90:3 › no horizontal overflow at 1440px
+[12/44] [local-chrome] › tests/landing.spec.ts:100:3 › progressive enhancement › essential content remains visible without JavaScript
+[WebServer] WebSocket server error: Port 24678 is already in use
+
+[13/44] [local-chrome] › tests/landing.spec.ts:111:1 › mobile menu declares its control relationship
+[14/44] [local-chrome] › tests/landing.spec.ts:120:1 › Escape closes mobile menu and returns focus
+[15/44] [local-chrome] › tests/landing.spec.ts:132:1 › mobile menu traps focus while open and closed links are not tabbable
+[16/44] [local-chrome] › tests/landing.spec.ts:145:1 › 200 percent text scale keeps controls available without horizontal overflow
+[17/44] [local-chrome] › tests/landing.spec.ts:157:1 › reduced motion disables meaningful transitions and smooth scroll
+[18/44] [local-chrome] › tests/platform.spec.ts:16:1 › US1: five ordered proposals have diagram, title, promise and description in DOM order
+[19/44] [local-chrome] › tests/platform.spec.ts:44:1 › US1: platform sits between roles and territory in main
+[20/44] [local-chrome] › tests/platform.spec.ts:49:1 › US1: desktop navigation targets the unique platform section and focuses its heading
+[21/44] [local-chrome] › tests/platform.spec.ts:68:1 › US1: mobile platform link opens, activates by keyboard and closes the menu
+[22/44] [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 360px
+[23/44] [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 390px
+[24/44] [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 768px
+[25/44] [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 1024px
+[26/44] [local-chrome] › tests/platform.spec.ts:94:3 › US1: platform and document do not overflow at 1440px
+[27/44] [local-chrome] › tests/platform.spec.ts:111:1 › US1: cards remain readable without clipping or overlap at 200% text scale
+[28/44] [local-chrome] › tests/platform.spec.ts:140:1 › US2: five decorative inline SVGs use fixed viewBox and no image or external resources
+[29/44] [local-chrome] › tests/platform.spec.ts:157:1 › US2: reduced motion prevents animation of every diagram and its descendants
+[30/44] [local-chrome] › tests/platform.spec.ts:173:3 › US2: static fallback › five cards and diagrams remain visible without JavaScript
+[31/44] [local-chrome] › tests/platform.spec.ts:196:1 › FR-007/FR-008: no cross-origin requests and no external links
+[WebServer] WebSocket server error: Port 24678 is already in use
+
+  1) [local-chrome] › tests/landing.spec.ts:22:1 › all required editorial sections exist ───────────
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('#problema')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('#problema') with timeout 5000ms
+      - waiting for locator('#problema')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      23 |   await openLanding(page)
+      24 |   for (const selector of ['#top', '#problema', '#metodo', '#para-quien', '#plataforma', '#principios', '#cierre', 'footer.site-footer']) {
+    > 25 |     await expect(page.locator(selector)).toHaveCount(1)
+         |                                          ^
+      26 |   }
+      27 |   await expect(page.locator('main h1')).toHaveCount(1)
+      28 |   await expect(page.locator('main > section')).toHaveCount(7)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/landing.spec.ts:25:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/landing-all-required-editorial-sections-exist-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/landing-all-required-editorial-sections-exist-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/landing-all-required-editorial-sections-exist-local-chrome/error-context.md
+
+
+[32/44] [local-chrome] › tests/rewrite-landing.spec.ts:3:1 › brand and one primary hero action identify the platform
+[33/44] [local-chrome] › tests/platform.spec.ts:209:1 › FR-007/FR-008: future proposal without prohibited content or platform facts
+[34/44] [local-chrome] › tests/rewrite-landing.spec.ts:17:1 › sections follow the agreed narrative and audiences inherit both images
+[35/44] [local-chrome] › tests/rewrite-landing.spec.ts:38:1 › method explains sources, all powers, weekly cut and human validation
+  2) [local-chrome] › tests/rewrite-landing.spec.ts:17:1 › sections follow the agreed narrative and audiences inherit both images 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 5
+
+      Array [
+        "top",
+    -   "problema",
+    +   "vision",
+        "metodo",
+    -   "para-quien",
+    +   "capacidades",
+    +   "",
+        "plataforma",
+    +   "",
+        "principios",
+    -   "cierre",
+    +   "contacto",
+      ]
+
+      17 | test('sections follow the agreed narrative and audiences inherit both images', async ({ page }) => {
+      18 |   await page.goto('/')
+    > 19 |   expect(await page.locator('main > section').evaluateAll((nodes) => nodes.map((node) => node.id))).toEqual([
+         |                                                                                                     ^
+      20 |     'top', 'problema', 'metodo', 'para-quien', 'plataforma', 'principios', 'cierre',
+      21 |   ])
+      22 |   await expect(page.locator('main').getByRole('heading', { name: /cómo funciona/i })).toHaveCount(1)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/rewrite-landing.spec.ts:19:101
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rewrite-landing-sections-f-8aed2-diences-inherit-both-images-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/rewrite-landing-sections-f-8aed2-diences-inherit-both-images-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rewrite-landing-sections-f-8aed2-diences-inherit-both-images-local-chrome/error-context.md
+
+
+  3) [local-chrome] › tests/landing.spec.ts:100:3 › progressive enhancement › essential content remains visible without JavaScript 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: /Organigrama Abierto/i, level: 1 })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: /Organigrama Abierto/i, level: 1 }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: /Organigrama Abierto/i, level: 1 })
+
+
+      100 |   test('essential content remains visible without JavaScript', async ({ page }) => {
+      101 |     await page.goto('/')
+    > 102 |     await expect(page.getByRole('heading', { level: 1, name: /Organigrama Abierto/i })).toBeVisible()
+          |                                                                                         ^
+      103 |     const hidden = await page.locator('[data-reveal]').evaluateAll((nodes) => nodes.filter((node) => {
+      104 |       const style = getComputedStyle(node)
+      105 |       return style.opacity === '0' || style.visibility === 'hidden'
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/landing.spec.ts:102:89
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/landing-progressive-enhanc-0331e--visible-without-JavaScript-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/landing-progressive-enhanc-0331e--visible-without-JavaScript-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/landing-progressive-enhanc-0331e--visible-without-JavaScript-local-chrome/error-context.md
+
+
+[36/44] [local-chrome] › tests/rewrite-landing.spec.ts:60:1 › mockup language is retired outside the frozen platform
+[37/44] [local-chrome] › tests/rewrite-landing.spec.ts:66:1 › principles, independence, construction and prohibited material
+[WebServer] WebSocket server error: Port 24678 is already in use
+
+  4) [local-chrome] › tests/rewrite-landing.spec.ts:60:1 › mockup language is retired outside the frozen platform 
+
+    Error: Retirar: El Estado que aprende, decide mejor.
+
+    expect(received).not.toContain(expected) // indexOf
+
+    Expected substring: not "El Estado que aprende, decide mejor."
+    Received string:        "Saltar al contenido
+    Sitio editorial en desarrollo · No es un canal oficial de atención del Estado peruano
+    Gob Perú
+    VISIÓN
+    CÓMO FUNCIONA
+    CAPACIDADES
+    PLATAFORMA
+    PRINCIPIOS
+    CONVERSEMOS
+    
+    CAPACIDAD PÚBLICA
+    
+    El Estado que aprende, decide mejor.
+    
+    Una mirada clara a cómo el conocimiento, el territorio y los servicios pueden avanzar juntos.
+    
+    EXPLORAR LA VISIÓN
+    CÓMO FUNCIONA
+    CAPACIDAD
+    PÚBLICA
+    ● VISIÓN COMPARTIDA
+    EL PUNTO DE PARTIDA
+    Ver mejor
+    
+    Conectar evidencia y contexto
+    
+    MIRADA
+    Territorio
+    MÉTODO
+    Evidencia
+    PROPÓSITO
+    Servicio
+    La transformación ya ocurre.
+    El reto es hacerla visible.
+    
+    Las instituciones producen conocimiento todos los días. Cuando ese aprendizaje se documenta y circula, una experiencia deja de ser aislada y se convierte en capacidad pública.
+    
+    INFORMACIÓN AISLADA
+    
+    Datos que se archivan
+    
+    Reportes, experiencias y aprendizajes que permanecen separados.
+    
+    CONOCIMIENTO CONECTADO
+    
+    Evidencia que orienta
+    
+    Contexto compartido para comparar, comprender y tomar mejores decisiones.
+    
+    UN MÉTODO CLARO
+    
+    Del aprendizaje local a una visión compartida.
+    
+    No se trata de producir más información. Se trata de convertir lo que ya sabemos en decisiones útiles, comprensibles y sostenibles.
+    
+    01
+    Observar
+    
+    Partir de la realidad, no de una solución predeterminada.
+    
+    02
+    Conectar
+    
+    Relacionar experiencias, actores y evidencia relevante.
+    
+    03
+    Actuar
+    
+    Traducir el aprendizaje en decisiones que mejoran el servicio.
+    
+    CONOCIMIENTO QUE CIRCULA
+    
+    Las mejores respuestas también nacen de escuchar.
+    
+    Equipos, comunidades y especialistas pueden leer un mismo desafío desde ángulos distintos. Esa diversidad, bien organizada, mejora la calidad de cada decisión.
+    
+    CONOCER NUESTROS PRINCIPIOS
+    APRENDIZAJE SITUADO
+    Personas que comparten experiencia para construir respuestas.
+    
+    UNA VISIÓN, DISTINTAS MIRADAS
+    
+    Capacidad para cada nivel del servicio público.
+    
+    Una misma base de conocimiento adquiere valor diferente según quién la utiliza y qué decisión necesita tomar.
+    
+    01
+    
+    EQUIPOS PÚBLICOS
+    
+    Decisiones con contexto
+    
+    Información ordenada para entender cada problema antes de elegir una respuesta.
+    
+    02
+    
+    INSTITUCIONES
+    
+    Capacidad que permanece
+    
+    Métodos y aprendizajes que pueden compartirse, adaptarse y sostenerse en el tiempo.
+    
+    03
+    
+    CIUDADANÍA
+    
+    Servicios más claros
+    
+    Experiencias públicas pensadas desde las necesidades reales de las personas.
+    
+    UNA PROPUESTA EN CONSTRUCCIÓN
+    
+    El Estado peruano, a la vista de todos.
+    
+    Proponemos reunir en un solo lugar quién ocupa cada cargo de los tres poderes, con la norma que lo respalda y la información pública que le da contexto.
+    
+    Quién ocupa cada cargo hoy
+    
+    Encuentra en segundos quién está a cargo de cualquier entidad de los tres poderes.
+    
+    El organigrama de cada entidad, con el nombre de quien ocupa cada cargo.
+    
+    Cada dato con su prueba
+    
+    Cada designación y cada cese enlazan a la norma que los respalda.
+    
+    Con copia archivada y un enlace permanente que se puede citar.
+    
+    La trayectoria de cada funcionario
+    
+    Mira dónde estuvo antes, cuánto duró en cada cargo y a dónde fue después.
+    
+    El historial de cargos dentro del Estado, armado con las mismas normas.
+    
+    Lo que cambió esta semana
+    
+    Cada lunes, las designaciones, ceses y rotaciones de la semana en un solo resumen.
+    
+    Filtrable por poder, sector o entidad, con alertas por correo.
+    
+    Contexto verificado en un solo lugar
+    
+    Documentos públicos y noticias de cada funcionario y entidad, reunidos y verificados.
+    
+    Se enlazan las fuentes; la plataforma no resume ni opina.
+    
+    VISIÓN TERRITORIAL
+    
+    Una lectura común para problemas conectados.
+    
+    Infraestructura, movilidad, cultura y servicios conviven en el mismo territorio. Ver sus relaciones es el primer paso para coordinar mejor.
+    
+    CONTEXTO
+    COORDINACIÓN
+    CONTINUIDAD
+    
+    DISEÑADO PARA LO PÚBLICO
+    
+    Principios antes que promesas.
+    01
+    Evidencia antes que intuición
+    
+    La información orienta; las personas responsables interpretan y deciden.
+    
+    02
+    Territorio antes que plantilla
+    
+    Cada solución parte del contexto, las capacidades y las restricciones locales.
+    
+    03
+    Aprendizaje antes que novedad
+    
+    Innovar también significa documentar, comparar y mejorar lo que ya funciona.
+    
+    04
+    Personas antes que procesos
+    
+    La tecnología debe reducir fricción y devolver tiempo al servicio público.
+    
+    EL SIGUIENTE PASO
+    
+    Hagamos visible el Estado que funciona.
+    
+    Conectemos experiencias, evidencia y personas para convertir aprendizaje público en mejores decisiones.
+    
+    CONOCER NUESTROS PRINCIPIOS
+    Gob Perú
+    EXPLORAR
+    Visión
+    Cómo funciona
+    Capacidades
+    Plataforma
+    Principios
+    INSTITUCIONAL
+    Contacto
+    Principios
+    Inicio
+    © 2026 Gob Perú
+    Una plataforma editorial en desarrollo."
+
+      61 |   await page.goto('/')
+      62 |   const text = await page.locator('body').innerText()
+    > 63 |   for (const phrase of withdrawn) expect(text, `Retirar: ${phrase}`).not.toContain(phrase)
+         |                                                                          ^
+      64 | })
+      65 |
+      66 | test('principles, independence, construction and prohibited material', async ({ page }) => {
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/rewrite-landing.spec.ts:63:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rewrite-landing-mockup-lan-9536f-outside-the-frozen-platform-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/rewrite-landing-mockup-lan-9536f-outside-the-frozen-platform-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rewrite-landing-mockup-lan-9536f-outside-the-frozen-platform-local-chrome/error-context.md
+
+
+[38/44] [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 360px
+[39/44] [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 390px
+[40/44] [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 768px
+[41/44] [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 1024px
+[42/44] [local-chrome] › tests/rewrite-landing.spec.ts:81:3 › new content fits 1440px
+[43/44] [local-chrome] › tests/rewrite-landing.spec.ts:88:1 › new text fits 360px at 200 percent
+[44/44] [local-chrome] › tests/rewrite-landing.spec.ts:97:3 › without JavaScript › fallback presents the same identity, narrative and action
+  5) [local-chrome] › tests/rewrite-landing.spec.ts:3:1 › brand and one primary hero action identify the platform 
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Organigrama Abierto/
+    Received string:  "Gob Perú — Capacidad pública"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        14 × locator resolved to <html lang="es" class="reveal-ready">…</html>
+           - unexpected value "Gob Perú — Capacidad pública"
+
+
+      3 | test('brand and one primary hero action identify the platform', async ({ page }) => {
+      4 |   await page.goto('/')
+    > 5 |   await expect(page).toHaveTitle(/Organigrama Abierto/)
+        |                      ^
+      6 |   await expect(page.locator('.site-header .brand')).toContainText('Organigrama Abierto')
+      7 |   await expect(page.locator('#top')).toContainText('Organigrama Abierto')
+      8 |   await expect(page.locator('.site-footer')).toContainText('Organigrama Abierto')
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/rewrite-landing.spec.ts:5:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rewrite-landing-brand-and--40c9e-ction-identify-the-platform-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/rewrite-landing-brand-and--40c9e-ction-identify-the-platform-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rewrite-landing-brand-and--40c9e-ction-identify-the-platform-local-chrome/error-context.md
+
+
+  6) [local-chrome] › tests/rewrite-landing.spec.ts:38:1 › method explains sources, all powers, weekly cut and human validation 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('#metodo')
+    Expected pattern: /fuentes oficiales/i
+    Received string:  " Un método claroDel aprendizaje local a una visión compartida.No se trata de producir más información. Se trata de convertir lo que ya sabemos en decisiones útiles, comprensibles y sostenibles.01ObservarPartir de la realidad, no de una solución predeterminada.02ConectarRelacionar experiencias, actores y evidencia relevante.03ActuarTraducir el aprendizaje en decisiones que mejoran el servicio."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" locator('#metodo') with timeout 5000ms
+      - waiting for locator('#metodo')
+        14 × locator resolved to <section id="metodo" class="method section">…</section>
+           - unexpected value " Un método claroDel aprendizaje local a una visión compartida.No se trata de producir más información. Se trata de convertir lo que ya sabemos en decisiones útiles, comprensibles y sostenibles.01ObservarPartir de la realidad, no de una solución predeterminada.02ConectarRelacionar experiencias, actores y evidencia relevante.03ActuarTraducir el aprendizaje en decisiones que mejoran el servicio."
+
+
+      47 |     /gerencia general/i, /organismos constitucionales autónomos/i, /fuera/i,
+      48 |     /lunes/i, /viernes/i,
+    > 49 |   ]) await expect(method).toContainText(term)
+         |                           ^
+      50 | })
+      51 |
+      52 | const withdrawn = [
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/rewrite-landing.spec.ts:49:27
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rewrite-landing-method-exp-4e310-ly-cut-and-human-validation-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/rewrite-landing-method-exp-4e310-ly-cut-and-human-validation-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rewrite-landing-method-exp-4e310-ly-cut-and-human-validation-local-chrome/error-context.md
+
+
+  7) [local-chrome] › tests/rewrite-landing.spec.ts:66:1 › principles, independence, construction and prohibited material 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('#principios')
+    Expected pattern: /cada dato.*fuente/i
+    Received string:  " Diseñado para lo públicoPrincipios antes que promesas.01Evidencia antes que intuiciónLa información orienta; las personas responsables interpretan y deciden.02Territorio antes que plantillaCada solución parte del contexto, las capacidades y las restricciones locales.03Aprendizaje antes que novedadInnovar también significa documentar, comparar y mejorar lo que ya funciona.04Personas antes que procesosLa tecnología debe reducir fricción y devolver tiempo al servicio público."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" locator('#principios') with timeout 5000ms
+      - waiting for locator('#principios')
+        14 × locator resolved to <section id="principios" class="principles section">…</section>
+           - unexpected value " Diseñado para lo públicoPrincipios antes que promesas.01Evidencia antes que intuiciónLa información orienta; las personas responsables interpretan y deciden.02Territorio antes que plantillaCada solución parte del contexto, las capacidades y las restricciones locales.03Aprendizaje antes que novedadInnovar también significa documentar, comparar y mejorar lo que ya funciona.04Personas antes que procesosLa tecnología debe reducir fricción y devolver tiempo al servicio público."
+
+
+      68 |   const principles = page.locator('#principios')
+      69 |   for (const phrase of [/cada dato.*fuente/i, /neutralidad/i, /enlaza.*no se opina/i, /protección de datos personales/i]) {
+    > 70 |     await expect(principles).toContainText(phrase)
+         |                              ^
+      71 |   }
+      72 |   await expect(page.locator('#cierre')).toContainText(/en construcción/i)
+      73 |   await expect(page.locator('body')).toContainText(/no es un canal oficial/i)
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/rewrite-landing.spec.ts:70:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rewrite-landing-principles-985ca-ion-and-prohibited-material-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/rewrite-landing-principles-985ca-ion-and-prohibited-material-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rewrite-landing-principles-985ca-ion-and-prohibited-material-local-chrome/error-context.md
+
+
+  8) [local-chrome] › tests/rewrite-landing.spec.ts:97:3 › without JavaScript › fallback presents the same identity, narrative and action 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('heading', { level: 1 })
+    Expected substring: "Organigrama Abierto"
+    Received string:    "El Estado que aprende, decide mejor."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" getByRole('heading', { level: 1 }) with timeout 5000ms
+      - waiting for getByRole('heading', { level: 1 })
+        14 × locator resolved to <h1>El Estado que aprende, decide mejor.</h1>
+           - unexpected value "El Estado que aprende, decide mejor."
+
+
+       97 |   test('fallback presents the same identity, narrative and action', async ({ page }) => {
+       98 |     await page.goto('/')
+    >  99 |     await expect(page.getByRole('heading', { level: 1 })).toContainText('Organigrama Abierto')
+          |                                                           ^
+      100 |     for (const phrase of [/ciudadanos y periodistas/i, /fuentes oficiales/i, /validación humana/i, /en construcción/i]) {
+      101 |       await expect(page.locator('main')).toContainText(phrase)
+      102 |     }
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/rewrite-landing.spec.ts:99:59
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rewrite-landing-without-Ja-b6f10-entity-narrative-and-action-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/rewrite-landing-without-Ja-b6f10-entity-narrative-and-action-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rewrite-landing-without-Ja-b6f10-entity-narrative-and-action-local-chrome/error-context.md
+
+
+  9) [local-chrome] › tests/landing.spec.ts:120:1 › Escape closes mobile menu and returns focus ────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.focus: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('navigation', { name: 'Navegación móvil' }).getByRole('link', { name: 'El problema' })
+
+
+      123 |   const toggle = page.getByRole('button', { name: 'Abrir menú' })
+      124 |   await toggle.click()
+    > 125 |   await page.getByRole('navigation', { name: 'Navegación móvil' }).getByRole('link', { name: 'El problema' }).focus()
+          |                                                                                                               ^
+      126 |   await page.keyboard.press('Escape')
+      127 |   await expect(toggle).toHaveAttribute('aria-expanded', 'false')
+      128 |   await expect(toggle).toBeFocused()
+        at /Users/danjoshuasantivanezgutarra/clientes/gob-peru/landing-gob-peru/tests/landing.spec.ts:125:111
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/landing-Escape-closes-mobile-menu-and-returns-focus-local-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/landing-Escape-closes-mobile-menu-and-returns-focus-local-chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/landing-Escape-closes-mobile-menu-and-returns-focus-local-chrome/error-context.md
+
+
+  9 failed
+    [local-chrome] › tests/landing.spec.ts:22:1 › all required editorial sections exist ────────────
+    [local-chrome] › tests/landing.spec.ts:100:3 › progressive enhancement › essential content remains visible without JavaScript 
+    [local-chrome] › tests/landing.spec.ts:120:1 › Escape closes mobile menu and returns focus ─────
+    [local-chrome] › tests/rewrite-landing.spec.ts:3:1 › brand and one primary hero action identify the platform 
+    [local-chrome] › tests/rewrite-landing.spec.ts:17:1 › sections follow the agreed narrative and audiences inherit both images 
+    [local-chrome] › tests/rewrite-landing.spec.ts:38:1 › method explains sources, all powers, weekly cut and human validation 
+    [local-chrome] › tests/rewrite-landing.spec.ts:60:1 › mockup language is retired outside the frozen platform 
+    [local-chrome] › tests/rewrite-landing.spec.ts:66:1 › principles, independence, construction and prohibited material 
+    [local-chrome] › tests/rewrite-landing.spec.ts:97:3 › without JavaScript › fallback presents the same identity, narrative and action 
+  35 passed (34.9s)

@@ -135,7 +135,8 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
 }
 .desktop-nav a:hover::after, .desktop-nav a:focus-visible::after { transform: scaleX(1); }
 
-.header-cta { justify-self: end; }
+.header-cta, .header-status { justify-self: end; }
+.header-status { color: var(--wine); font-size: 11px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }
 .button {
   min-height: 44px;
   padding: 0 20px;
@@ -260,6 +261,44 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
 .comparison article > p:last-child { margin-top: 10px; max-width: 390px; color: var(--muted); font-size: 14px; line-height: 1.55; }
 .comparison-arrow { display: grid; place-items: center; color: var(--wine); }
 .comparison-arrow svg { width: 25px; fill: none; stroke: currentColor; }
+/* Escenas 3D isométricas en tinta de la marca (problema y método). */
+.scene-art { height: 240px; margin: 34px 0 0; }
+.scene-art .diagram { display: block; }
+.diagram .sc-shadow { fill: var(--wine); opacity: .07; stroke: none; }
+.diagram .sc-ink { stroke: var(--wine); stroke-width: .7; fill: none; opacity: .55; }
+.diagram .sc-rule { stroke: var(--wine); stroke-width: 1; fill: none; }
+.diagram .sc-fold { stroke: var(--wine); stroke-width: .7; stroke-dasharray: 2 2; fill: none; }
+.diagram .sc-pages { stroke: var(--wine); stroke-width: .5; fill: none; opacity: .6; }
+.diagram .sc-panel { fill: var(--paper); stroke: var(--wine); stroke-width: .8; }
+.diagram .sc-search { fill: var(--surface); stroke: var(--wine); stroke-width: .8; }
+.diagram .sc-lens { fill: none; stroke: var(--wine); stroke-width: .9; }
+.diagram .sc-selected { fill: none; stroke: var(--wine); stroke-width: .8; stroke-dasharray: 1.5 1.5; }
+.diagram .sc-avatar { fill: var(--wine-soft); stroke: var(--wine); stroke-width: .7; }
+.diagram .sc-ink--screen { opacity: .75; }
+.diagram .sc-label { fill: var(--paper); stroke: var(--wine); stroke-width: .8; }
+.method-icon .diagram { display: block; }
+.diagram .ar-shadow { fill: var(--wine); opacity: .07; stroke: none; }
+.diagram .ar-under { fill: var(--paper); stroke: none; }
+.diagram .ar-slot { stroke: var(--wine); stroke-width: .7; }
+.diagram .ar-card { fill: none; stroke: var(--wine); stroke-width: .7; }
+.diagram .ar-handle { fill: var(--paper); stroke: var(--wine); stroke-width: .9; }
+.diagram .ar-doc-ink { stroke: var(--paper); stroke-width: .8; fill: none; }
+.diagram .st-shadow { fill: var(--wine); opacity: .07; stroke: none; }
+.diagram .st-under { fill: var(--paper); stroke: none; }
+.diagram .st-shade { stroke: none; }
+.diagram .st-outline { fill: none; stroke: var(--wine); stroke-width: 1.1; }
+.diagram .st-rule { stroke: var(--wine); stroke-width: 1; fill: none; }
+.diagram .st-ink { stroke: var(--wine); stroke-width: .7; fill: none; opacity: .55; }
+.diagram .st-ring { fill: none; stroke: var(--wine); stroke-width: 1.2; }
+.diagram .nb-shadow { fill: var(--wine); opacity: .07; stroke: none; }
+.diagram .nb-under { fill: var(--paper); stroke: none; }
+.diagram .nb-cork { stroke: var(--wine); stroke-width: .8; }
+.diagram .nb-note { stroke-width: .9; }
+.diagram .nb-ink { stroke: var(--wine); stroke-width: .7; fill: none; opacity: .55; }
+.diagram .nb-rule { stroke: var(--wine); stroke-width: 1.3; fill: none; }
+.diagram .nb-box { fill: none; stroke: var(--wine); stroke-width: .7; }
+.diagram .nb-pin--plain { fill: var(--paper); stroke: var(--wine); stroke-width: .9; }
+.diagram .nb-pin-shadow { fill: var(--wine); opacity: .14; stroke: none; }
 .paper-stack { position: relative; width: 230px; height: 220px; margin: 55px auto 0; }
 .paper { position: absolute; width: 155px; height: 190px; padding: 38px 25px; border: 1px solid #bfb4ac; background: var(--surface); box-shadow: 0 8px 20px rgba(50,40,35,.05); }
 .paper-one { left: 0; top: 15px; transform: rotate(-7deg); }
@@ -276,6 +315,13 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
 .network-mark span:nth-child(5) { right: 22px; top: 60px; }
 
 .method { border-top: 1px solid var(--rule); }
+.scope { margin-top: 48px; padding: 30px; border: 1px solid var(--rule); background: var(--surface); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 36px; }
+.scope h3 { grid-column: 1 / -1; font-size: 27px; }
+.scope p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+.scope strong { color: var(--ink); }
+.audiences { overflow: hidden; }
+.audiences .territory { margin-bottom: 110px; }
+.closing .text-link { color: var(--wine); border-color: var(--wine); }
 .section-intro .eyebrow { margin-bottom: 18px; }
 .method-grid { margin-top: 72px; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--rule); }
 .method-grid article { position: relative; min-height: 405px; padding: 30px; background: rgba(255,255,255,.26); }
@@ -284,18 +330,6 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
 .method-grid h3 { margin-top: 32px; font-size: 27px; }
 .method-grid p { margin-top: 9px; max-width: 270px; color: var(--muted); font-size: 14px; line-height: 1.55; }
 .method-icon { position: relative; height: 185px; }
-.method-icon i { position: absolute; display: block; }
-.observe i { top: 67px; width: 73px; height: 73px; border: 1px solid var(--wine); border-radius: 50%; }
-.observe i:nth-child(1) { left: 22%; }
-.observe i:nth-child(2) { left: 38%; }
-.observe i:nth-child(3) { left: 54%; }
-.connect i { width: 46px; height: 46px; border: 1px solid var(--wine); transform: rotate(45deg); }
-.connect i:nth-child(1) { left: 32%; top: 45px; }
-.connect i:nth-child(2) { left: 48%; top: 45px; }
-.connect i:nth-child(3) { left: 32%; top: 92px; }
-.connect i:nth-child(4) { left: 48%; top: 92px; background: rgba(85,16,39,.12); }
-.act i:first-child { left: 30%; top: 50px; width: 110px; height: 80px; border: 1px solid var(--wine); }
-.act i:last-child { left: calc(30% + 40px); top: 26px; width: 66px; height: 66px; border: 1px solid var(--wine); background: var(--paper); transform: rotate(45deg); }
 
 .field { width: 100%; padding: 0; display: grid; grid-template-columns: 44% 56%; background: var(--wine); color: white; }
 .field-copy { padding: 105px max(48px, calc((100vw - 1240px) / 2)); padding-right: 70px; align-self: center; }
@@ -426,7 +460,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
 
 @media (max-width: 980px) {
   :root { --container: min(100% - 40px, 860px); }
-  .desktop-nav, .header-cta { display: none; }
+  .desktop-nav, .header-cta, .header-status { display: none; }
   .nav-shell { display: flex; justify-content: space-between; }
   .menu-toggle { width: 44px; height: 44px; padding: 0; display: grid; place-content: center; gap: 6px; border: 0; background: transparent; }
   .menu-toggle span { width: 24px; height: 1px; background: var(--ink); transition: transform .2s ease; }
@@ -459,7 +493,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
   .hero-stage > picture img { object-position: 64% center; }
   .capability-card { width: calc(100% - 40px); min-height: 430px; padding: 24px; }
   .card-center { top: 82px; left: 24px; width: 150px; }
-  .card-center strong { font-size: 34px; }
+  .card-center strong { font-size: 30px; overflow-wrap: anywhere; }
   .radar { top: 115px; right: 13px; width: 170px; opacity: .85; }
   .card-stats { right: 24px; bottom: 24px; left: 24px; }
   .card-stats div { padding-right: 4px; }
@@ -471,6 +505,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
   .comparison { margin-top: 48px; grid-template-columns: 1fr; }
   .comparison-arrow { height: 60px; transform: rotate(90deg); }
   .comparison > article { min-height: 430px; padding: 25px; }
+  .scope { grid-template-columns: 1fr; padding: 24px; }
   .method-grid { grid-template-columns: 1fr; margin-top: 48px; }
   .method-grid article { min-height: 370px; }
   .method-grid article + article { border-top: 1px solid var(--rule); border-left: 0; }
@@ -481,6 +516,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
   .role-grid { grid-template-columns: 1fr; margin-top: 48px; }
   .role-grid article { min-height: 350px; }
   .territory { width: 100%; padding-top: 0; }
+  .audiences .territory { margin-bottom: 0; }
   .territory-stage { min-height: 760px; border-right: 0; border-left: 0; }
   .territory-stage img { object-position: 56% center; }
   .territory-card { top: auto; right: 20px; bottom: 20px; left: 20px; width: auto; padding: 28px 25px; }
@@ -498,4 +534,200 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 560; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
   [data-reveal] { opacity: 1; transform: none; }
+}
+
+/* Escena "Una lectura común": grafo de personas. */
+.diagram .pg-edge-line { stroke: var(--wine); stroke-width: 1.2; stroke-dasharray: 3.5 3; fill: none; }
+.diagram .pg-socket { fill: var(--wine); stroke: var(--paper); stroke-width: 1; }
+.diagram .pg-joint { fill: var(--wine); }
+.diagram .pg-shadow { fill: var(--wine); opacity: .07; }
+.diagram .pg-ring { fill: none; stroke: var(--wine); stroke-width: 1.1; }
+.diagram .pg-outline { fill: none; stroke: var(--wine); stroke-width: 1.1; }
+.diagram .pg-body--plain, .diagram .pg-light--plain, .diagram .pg-head-shade--plain { stroke: none; }
+.diagram .pg-head--plain { fill: var(--paper); stroke: none; }
+.diagram .pg-cap--plain { fill: var(--paper); }
+.diagram .pg-cap--accent { fill: var(--wine-bright); stroke: none; }
+.diagram .pg-under { fill: var(--paper); stroke: none; }
+.diagram .pg-cap--plain { stroke: none; }
+.diagram .pg-dome-shade--plain { stroke: none; }
+.diagram .pg-dome-shade--accent { fill: none; stroke: none; }
+.diagram .pg-chip--plain { fill: var(--paper); stroke: var(--wine); stroke-width: 1; }
+.diagram .pg-chip--accent { fill: var(--wine); stroke: none; }
+.diagram .pg-chip-dot--plain { fill: var(--wine); }
+.diagram .pg-chip-dot--accent { fill: var(--paper); }
+.diagram .pg-chip-ink--plain { stroke: var(--wine); stroke-width: .8; opacity: .55; fill: none; }
+.diagram .pg-chip-ink--accent { stroke: var(--paper); stroke-width: .8; fill: none; }
+.diagram :is(.pg-body--accent, .pg-head--accent) { fill: var(--wine); stroke: none; }
+.diagram :is(.pg-light--accent, .pg-head-shade--accent) { fill: none; stroke: none; }
+
+/* Escena "Documentos separados". Loop de 10 s con ida y vuelta; el estado base es la escena estática (0 % = 100 %).
+   8–20 %: la hoja superior de cada resma se levanta, se desliza y vuelve (escalonadas, como mucho dos a la vez).
+   20–30 %: el periódico se levanta, se corre y se asienta. 30–72 %: la búsqueda en la laptop (se borra y se escribe
+   la consulta, reaparecen los resultados, la selección baja y vuelve) y late la pestaña del dato encontrado. */
+.scene :is(.sc-top--r1, .sc-top--r2, .sc-top--r3, .sc-top--paper, .sc-query, .sc-result, .sc-selected, .sc-found) {
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.35, 1);
+  animation-iteration-count: infinite;
+}
+.scene .sc-top--r1 { animation-name: scene-sheet-r1; }
+.scene .sc-top--r2 { animation-name: scene-sheet-r2; }
+.scene .sc-top--r3 { animation-name: scene-sheet-r3; }
+.scene .sc-top--paper { animation-name: scene-paper-lift; }
+.scene .sc-query { transform-box: fill-box; transform-origin: left center; animation-name: scene-type-query; }
+.scene .sc-result--1 { animation-name: scene-result-1; }
+.scene .sc-result--2 { animation-name: scene-result-2; }
+.scene .sc-result--3 { animation-name: scene-result-3; }
+.scene .sc-selected { animation-name: scene-select-rows; }
+.scene .sc-found { transform-box: fill-box; transform-origin: center; animation-name: scene-found-pulse; }
+
+/* Hojas: suben 5 px en pantalla y se deslizan unos px; vuelven por el mismo camino. */
+@keyframes scene-sheet-r1 { 0%, 8% { transform: translate(0, 0); } 11%, 12% { transform: translate(-4px, -6px); } 15%, 100% { transform: translate(0, 0); } }
+@keyframes scene-sheet-r2 { 0%, 11% { transform: translate(0, 0); } 14%, 15% { transform: translate(5px, -6px); } 18%, 100% { transform: translate(0, 0); } }
+@keyframes scene-sheet-r3 { 0%, 14% { transform: translate(0, 0); } 17%, 18% { transform: translate(-3px, -7px); } 21%, 100% { transform: translate(0, 0); } }
+@keyframes scene-paper-lift { 0%, 20% { transform: translate(0, 0); } 24%, 26% { transform: translate(6px, -8px); } 30%, 100% { transform: translate(0, 0); } }
+
+@keyframes scene-type-query {
+  0%, 30% { transform: scaleX(1); }
+  34% { transform: scaleX(0); }
+  44%, 100% { transform: scaleX(1); }
+}
+@keyframes scene-result-1 { 0%, 30% { opacity: 1; } 34%, 44% { opacity: 0; } 47%, 100% { opacity: 1; } }
+@keyframes scene-result-2 { 0%, 30% { opacity: 1; } 34%, 47% { opacity: 0; } 50%, 100% { opacity: 1; } }
+@keyframes scene-result-3 { 0%, 30% { opacity: 1; } 34%, 50% { opacity: 0; } 53%, 100% { opacity: 1; } }
+/* Filas separadas 8,5 u en el plano de la pantalla: la selección baja dos filas y regresa. */
+@keyframes scene-select-rows {
+  0%, 30% { opacity: 1; transform: translateY(0); }
+  34%, 51% { opacity: 0; transform: translateY(0); }
+  53% { opacity: 1; transform: translateY(0); }
+  57% { transform: translateY(8.5px); }
+  60%, 62% { transform: translateY(17px); }
+  66%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes scene-found-pulse {
+  0%, 66% { transform: scale(1); }
+  69% { transform: scale(1.3); }
+  72%, 100% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene :is(.sc-top--r1, .sc-top--r2, .sc-top--r3, .sc-top--paper, .sc-query, .sc-result, .sc-selected, .sc-found) { animation: none; }
+}
+
+/* Escena "Una lectura común" — árbol de búsqueda. Loop de 10 s con ida y vuelta; el estado base es la escena
+   estática, con la persona encontrada pintada (0 % = 100 %). La persona se despinta, la búsqueda recorre el árbol
+   (raíz, rama derecha con sus dos hijos, retrocede, rama izquierda) marcando cada visita y cada arista; las ramas
+   descartadas quedan tenues y el camino encontrado encendido; al llegar, la persona se vuelve a pintar y su anillo
+   late; luego se apagan las marcas. */
+.scene :is(.pg-paint, .pg-visit, .pg-trail, .pg-paint .pg-ring) {
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.35, 1);
+  animation-iteration-count: infinite;
+}
+.diagram .pg-visit { fill: none; stroke: var(--wine); stroke-width: 1.8; opacity: 0; }
+.diagram .pg-trail { fill: none; stroke: var(--wine); stroke-width: 1.2; stroke-linecap: butt; opacity: 0; }
+.scene .pg-paint { animation-name: people-paint; }
+@keyframes people-paint { 0%, 8% { opacity: 1; } 12%, 48% { opacity: 0; } 53%, 100% { opacity: 1; } }
+.scene .pg-paint .pg-ring { transform-box: fill-box; transform-origin: center; animation-name: people-found-ring; }
+@keyframes people-found-ring { 0%, 53% { transform: scale(1); } 56% { transform: scale(1.3); } 59%, 100% { transform: scale(1); } }
+.scene .pg-visit--root { animation-name: people-visit-root; }
+@keyframes people-visit-root { 0%, 12% { opacity: 0; } 14%, 64% { opacity: 1; } 70%, 100% { opacity: 0; } }
+.scene .pg-visit--b { animation-name: people-visit-b; }
+@keyframes people-visit-b { 0%, 19% { opacity: 0; } 21%, 64% { opacity: 1; } 70%, 100% { opacity: 0; } }
+.scene .pg-visit--b1 { animation-name: people-visit-b1; }
+@keyframes people-visit-b1 { 0%, 24% { opacity: 0; } 26%, 64% { opacity: 1; } 70%, 100% { opacity: 0; } }
+.scene .pg-visit--b2 { animation-name: people-visit-b2; }
+@keyframes people-visit-b2 { 0%, 29% { opacity: 0; } 31%, 64% { opacity: 1; } 70%, 100% { opacity: 0; } }
+.scene .pg-visit--a { animation-name: people-visit-a; }
+@keyframes people-visit-a { 0%, 37% { opacity: 0; } 39%, 64% { opacity: 1; } 70%, 100% { opacity: 0; } }
+.scene .pg-visit--a1 { animation-name: people-visit-a1; }
+@keyframes people-visit-a1 { 0%, 42% { opacity: 0; } 44%, 64% { opacity: 1; } 70%, 100% { opacity: 0; } }
+.scene .pg-visit--a2 { animation-name: people-visit-a2; }
+@keyframes people-visit-a2 { 0%, 47% { opacity: 0; } 49%, 64% { opacity: 1; } 70%, 100% { opacity: 0; } }
+.scene .pg-trail--b { animation-name: people-trail-b; }
+@keyframes people-trail-b { 0%, 15% { opacity: 0; } 18%, 31% { opacity: 1; } 34%, 64% { opacity: .3; } 70%, 100% { opacity: 0; } }
+.scene .pg-trail--b1 { animation-name: people-trail-b1; }
+@keyframes people-trail-b1 { 0%, 21% { opacity: 0; } 24%, 31% { opacity: 1; } 34%, 64% { opacity: .3; } 70%, 100% { opacity: 0; } }
+.scene .pg-trail--b2 { animation-name: people-trail-b2; }
+@keyframes people-trail-b2 { 0%, 26% { opacity: 0; } 29%, 31% { opacity: 1; } 34%, 64% { opacity: .3; } 70%, 100% { opacity: 0; } }
+.scene .pg-trail--a { animation-name: people-trail-a; }
+@keyframes people-trail-a { 0%, 34% { opacity: 0; } 37%, 64% { opacity: 1; } 70%, 100% { opacity: 0; } }
+.scene .pg-trail--a1 { animation-name: people-trail-a1; }
+@keyframes people-trail-a1 { 0%, 39% { opacity: 0; } 42%, 44% { opacity: 1; } 47%, 64% { opacity: .3; } 70%, 100% { opacity: 0; } }
+.scene .pg-trail--a2 { animation-name: people-trail-a2; }
+@keyframes people-trail-a2 { 0%, 44% { opacity: 0; } 47%, 64% { opacity: 1; } 70%, 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .scene :is(.pg-paint, .pg-visit, .pg-trail, .pg-paint .pg-ring) { animation: none; }
+}
+
+/* Método 01 "Consultar" — el documento se saca para leerlo. Loop de 10 s con ida y vuelta; el estado base es la
+   escena estática (0 % = 100 %). Sube 14 px (su borde inferior sigue tapado por las carpetas), queda arriba mientras
+   se consulta y vuelve a su lugar. Reposo: 0–20 % y 80–100 %. */
+.scene .ar-doc {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: archive-doc 10s cubic-bezier(0.45, 0, 0.35, 1) infinite;
+}
+@keyframes archive-doc {
+  0%, 20% { transform: translateY(0); }
+  38%, 62% { transform: translateY(-14px); }
+  80%, 100% { transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scene .ar-doc { animation: none; }
+}
+
+/* Método 02 "Validar" — el sello confirma el cambio. Loop de 10 s con ida y vuelta; el estado base es la escena
+   estática, con la marca impresa y el sello levantado (0 % = 100 %). La marca se borra, el sello baja 29,52 px (la
+   goma toca la hoja: (28 − 1,6) × 1,118), la marca aparece bajo el sello mientras presiona y queda a la vista al
+   subir. Nunca se mueven más de dos grupos. Reposo: 0–15 % y 64–100 %. */
+.scene :is(.st-stamp, .st-print) {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.35, 1);
+  animation-iteration-count: infinite;
+}
+.scene .st-stamp { animation-name: stamp-press; }
+@keyframes stamp-press {
+  0%, 25% { transform: translateY(0); }
+  42%, 46% { transform: translateY(29.52px); }
+  64%, 100% { transform: translateY(0); }
+}
+.scene .st-print { animation-name: stamp-print; }
+@keyframes stamp-print {
+  0%, 15% { opacity: 1; }
+  25%, 43% { opacity: 0; }
+  44%, 100% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scene :is(.st-stamp, .st-print) { animation: none; }
+}
+
+/* Método 03 "Publicar" — el corte de los lunes. Loop de 10 s con ida y vuelta; el estado base es la escena
+   estática, con la hoja semanal clavada (0 % = 100 %). La chincheta se desclava (15–25 %), la hoja vieja baja por el
+   tablero y se va (25–38 %), entra la nueva desde arriba (44–58 %) y la chincheta la vuelve a clavar (60–68 %). Los
+   desplazamientos van en el plano de la cara: los grupos viven dentro de la matriz del tablero. Un solo grupo se
+   mueve a la vez. Reposo: 0–15 % y 68–100 %. */
+.scene :is(.nb-week, .nb-week-pin) {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.35, 1);
+  animation-iteration-count: infinite;
+}
+.scene .nb-week { animation-name: board-week; }
+@keyframes board-week {
+  0%, 25% { opacity: 1; transform: translateY(0); }
+  38% { opacity: 0; transform: translateY(12px); }
+  44% { opacity: 0; transform: translateY(-12px); }
+  58%, 100% { opacity: 1; transform: translateY(0); }
+}
+.scene .nb-week-pin { animation-name: board-pin; }
+@keyframes board-pin {
+  0%, 15% { opacity: 1; transform: translateY(0) scale(1); }
+  25%, 60% { opacity: 0; transform: translateY(-6px) scale(1.5); }
+  68%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scene :is(.nb-week, .nb-week-pin) { animation: none; }
 }

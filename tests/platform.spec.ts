@@ -41,9 +41,9 @@ test('US1: five ordered proposals have diagram, title, promise and description i
   }
 })
 
-test('US1: platform sits between roles and territory in main', async ({ page }) => {
+test('US1: platform follows the merged audience section in main', async ({ page }) => {
   await openPlatform(page)
-  await expect(page.locator('main > section.roles + section#plataforma + section.territory')).toHaveCount(1)
+  await expect(page.locator('main > section#para-quien + section#plataforma')).toHaveCount(1)
 })
 
 test('US1: desktop navigation targets the unique platform section and focuses its heading', async ({ page }) => {

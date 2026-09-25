@@ -21,11 +21,11 @@ test('all internal anchors resolve and no fictional contact exists', async ({ pa
 
 test('all required editorial sections exist', async ({ page }) => {
   await openLanding(page)
-  for (const selector of ['#top', '#vision', '#metodo', '#capacidades', '#principios', '#contacto', 'footer.site-footer']) {
+  for (const selector of ['#top', '#problema', '#metodo', '#para-quien', '#plataforma', '#principios', '#cierre', 'footer.site-footer']) {
     await expect(page.locator(selector)).toHaveCount(1)
   }
   await expect(page.locator('main h1')).toHaveCount(1)
-  await expect(page.locator('main > section')).toHaveCount(9)
+  await expect(page.locator('main > section')).toHaveCount(7)
 })
 
 test('images expose local modern variants, alt, dimensions and loading policy', async ({ page }) => {
@@ -49,7 +49,7 @@ test('images expose local modern variants, alt, dimensions and loading policy', 
   expect(pictures.every((item) => item.formats.some((source) => source.type === 'image/webp' && source.srcset.includes('/images/optimized/')))).toBeTruthy()
 })
 
-test('hero and territorial section use different illustrations', async ({ page }) => {
+test('hero and audience illustrations use different sources', async ({ page }) => {
   await openLanding(page)
   const sources = await page.locator('picture img').evaluateAll((images) => images.map((image) => image.getAttribute('src')))
   expect(sources[0]).not.toBe(sources[2])
@@ -99,7 +99,7 @@ test.describe('progressive enhancement', () => {
   test.use({ javaScriptEnabled: false })
   test('essential content remains visible without JavaScript', async ({ page }) => {
     await page.goto('/')
-    await expect(page.getByRole('heading', { level: 1, name: 'El Estado que aprende, decide mejor.' })).toBeVisible()
+    await expect(page.getByRole('heading', { level: 1, name: /Organigrama Abierto/i })).toBeVisible()
     const hidden = await page.locator('[data-reveal]').evaluateAll((nodes) => nodes.filter((node) => {
       const style = getComputedStyle(node)
       return style.opacity === '0' || style.visibility === 'hidden'
@@ -122,7 +122,7 @@ test('Escape closes mobile menu and returns focus', async ({ page }) => {
   await openLanding(page)
   const toggle = page.getByRole('button', { name: 'Abrir menú' })
   await toggle.click()
-  await page.getByRole('navigation', { name: 'Navegación móvil' }).getByRole('link', { name: 'Visión' }).focus()
+  await page.getByRole('navigation', { name: 'Navegación móvil' }).getByRole('link', { name: 'El problema' }).focus()
   await page.keyboard.press('Escape')
   await expect(toggle).toHaveAttribute('aria-expanded', 'false')
   await expect(toggle).toBeFocused()

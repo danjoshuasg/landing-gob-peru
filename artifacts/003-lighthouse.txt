@@ -1,0 +1,16 @@
+===== Lighthouse (SC-006) =====
+Herramienta: lighthouse 12.8.2 · Chrome headless · fecha 2026-09-25T01:53:37.778Z
+URL: http://127.0.0.1:4174/ (vite preview del build de producción)
+accessibility: 100
+best-practices: 100
+seo: 100
+performance: 91
+Auditorías con peso por debajo de 1 en accesibilidad, buenas prácticas y SEO: ninguna
+SC-006 exige >=95 en accesibilidad, SEO y buenas prácticas: CUMPLE. Performance no tiene umbral en la spec.
+
+===== Desborde horizontal (SC-004) e ilustraciones del método =====
+360 px: scrollWidth=360 innerWidth=360 desborde=no ilustraciones del método=3 sin tapar títulos=sí
+390 px: scrollWidth=390 innerWidth=390 desborde=no ilustraciones del método=3 sin tapar títulos=sí
+768 px: scrollWidth=768 innerWidth=768 desborde=no ilustraciones del método=3 sin tapar títulos=sí
+1024 px: scrollWidth=1024 innerWidth=1024 desborde=no ilustraciones del método=3 sin tapar títulos=sí
+1440 px: scrollWidth=1440 innerWidth=1440 desborde=no ilustraciones del método=3 sin tapar títulos=sí

@@ -17,9 +17,9 @@ function platformFallback(): Plugin {
       try {
         const { PlatformSection } = await server.ssrLoadModule('/src/components/PlatformSection.tsx')
         const section = renderToStaticMarkup(createElement(PlatformSection))
-        const marker = '</noscript>'
+        const marker = '<!-- platform-fallback -->'
         if (!html.includes(marker)) throw new Error('Missing existing no-script fallback')
-        return html.replace(marker, `${marker}\n      <main id="main">${section}</main>`)
+        return html.replace(marker, section)
       } finally {
         await server.close()
       }
